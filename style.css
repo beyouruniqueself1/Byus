@@ -1,0 +1,87 @@
+/* Variables de couleurs */
+:root {
+  --violet-fonce: #3a1f59;
+  --jaune-pale: #f0e6a2;
+}
+
+/* Styles généraux */
+body { 
+  font-family: 'Segoe UI', Tahoma, sans-serif; 
+  margin: 0; 
+  padding-top: 60px; /* Pour le menu fixe */
+  background: #f9f7f1; 
+  color: var(--violet-fonce);
+}
+
+header, footer { 
+  background: var(--violet-fonce); 
+  color: var(--jaune-pale); 
+  padding: 20px; 
+  text-align: center; 
+}
+
+/* Menu fixe en haut */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navigation */
+nav { 
+  background: var(--jaune-pale); 
+  padding: 10px; 
+  text-align: center; 
+}
+
+nav ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul.menu li {
+  margin: 0 15px;
+}
+
+nav ul.menu li a { 
+  color: var(--violet-fonce);
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 1rem;
+}
+
+nav ul.menu li a:hover { 
+  text-decoration: underline; 
+}
+
+/* Contenu principal */
+main { 
+  max-width: 800px; 
+  margin: auto; 
+  padding: 20px; 
+}
+
+/* Titres */
+h1, h2, h3 {
+  color: var(--violet-fonce);
+  text-align: center;
+}
+
+/* Pied de page */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Liens dans le footer */
+footer a {
+  color: var(--jaune-pale);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
