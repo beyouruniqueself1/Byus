@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact - BYUS</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - BYUS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header>
-    <h1>BYUS</h1>
-    <p>Culture coréenne à Marseille</p>
+  <h1>BYUS</h1>
+  <p>Culture coréenne à Marseille</p>
 </header>
 <nav>
-    <a href="index.html">Accueil</a>
-    <a href="evenements.html">Événements</a>
-    <a href="cours.html">Cours</a>
-    <a href="apropos.html">À propos</a>
-    <a href="galerie.html">Galerie</a>
-    <a href="contact.html">Contact</a>
-    <a href="adhesion.html">Adhésion</a>
-    <a href="mentions.html">Mentions légales</a>
+  <ul class="menu" role="menubar" aria-label="Navigation principale">
+    <li role="none"><a role="menuitem" href="index.html">Accueil</a></li>
+    <li role="none"><a role="menuitem" href="evenements.html">Événements</a></li>
+    <li role="none"><a role="menuitem" href="cours.html">Cours</a></li>
+    <li role="none"><a role="menuitem" href="apropos.html">À propos</a></li>
+    <li role="none"><a role="menuitem" href="galerie.html">Galerie</a></li>
+    <li role="none"><a role="menuitem" href="contact.html" aria-current="page">Contact</a></li>
+    <li role="none"><a role="menuitem" href="adhesion.html">Adhésion</a></li>
+    <li role="none"><a role="menuitem" href="mentions.html">Mentions légales</a></li>
+  </ul>
 </nav>
 <main>
-    <h2>Nous contacter</h2>
+  <h2>Contactez-nous</h2>
+  <form action="mailto:contactbeyouruniqueself@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Nom :</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
     
-            <p>Email : <a href="mailto:contactbeyouruniqueself@gmail.com">contactbeyouruniqueself@gmail.com</a></p>
-            <p>Instagram : <a href="https://instagram.com/byus_off" target="_blank">@byus_off</a></p>
-            <form>
-                <p><label>Nom : <input type="text" name="name"></label></p>
-                <p><label>Email : <input type="email" name="email"></label></p>
-                <p><label>Message : <br><textarea name="message" rows="4" cols="40"></textarea></label></p>
-                <p><button type="submit">Envoyer</button></p>
-            </form>
-        
+    <label for="email">Email :</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+    
+    <label for="message">Message :</label><br />
+    <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+    
+    <button type="submit">Envoyer</button>
+  </form>
+  
+  <h3>Nos réseaux sociaux</h3>
+  <p>Instagram : <a href="https://www.instagram.com/byus_off" target="_blank" rel="noopener">@byus_off</a></p>
+  <p>Email : <a href="mailto:contactbeyouruniqueself@gmail.com">contactbeyouruniqueself@gmail.com</a></p>
 </main>
 <footer>
-    &copy; 2025 BYUS — Tous droits réservés | <a href="mentions.html">Mentions légales</a>
+  <p>&copy; 2025 BYUS — Tous droits réservés</p>
+  <p><a href="mentions.html">Mentions légales</a></p>
 </footer>
 </body>
 </html>
