@@ -5,9 +5,23 @@
   <title>Accueil - Be Your Unique Self</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    .logo {
+      display: block;
+      margin: 30px auto 20px;
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>BYUS</h1><p>Évènements à Marseille</p></header>
+  <header>
+    <!-- Logo SVG -->
+    <img src="logo-byus.svg" alt="Logo BYUS" class="logo">
+    <h1>BYUS</h1>
+    <p>Évènements à Marseille</p>
+  </header>
+
   <nav>
     <ul class="menu">
       <li><a href="index.html">Accueil</a></li>
@@ -20,30 +34,12 @@
       <li><a href="mentions.html">Mentions légales</a></li>
     </ul>
   </nav>
-  <main>
-    <!-- Logo SVG BYUS -->
-    <svg width="200" height="100" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-label="Logo BYUS" role="img">
-      <defs>
-        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#5c1a8b"/>
-          <stop offset="100%" stop-color="#fdf7c3"/>
-        </linearGradient>
-        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%" >
-          <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#fdf7c3" flood-opacity="0.7"/>
-        </filter>
-      </defs>
-      <text x="10" y="60" font-family="Arial Black, sans-serif" font-size="60" fill="url(#grad)" filter="url(#glow)">B</text>
-      <text x="55" y="60" font-family="Arial Black, sans-serif" font-size="60" fill="url(#grad)" filter="url(#glow)">Y</text>
-      <text x="95" y="60" font-family="Arial Black, sans-serif" font-size="60" fill="url(#grad)" filter="url(#glow)">U</text>
-      <text x="140" y="60" font-family="Arial Black, sans-serif" font-size="60" fill="url(#grad)" filter="url(#glow)">S</text>
-      <circle cx="170" cy="30" r="6" fill="#fdf7c3" filter="url(#glow)"/>
-      <circle cx="170" cy="30" r="2" fill="#5c1a8b"/>
-      <circle cx="170" cy="30" r="12" stroke="url(#grad)" stroke-width="1" fill="none" opacity="0.6"/>
-    </svg>
 
+  <main>
     <h2>Bienvenue sur BYUS</h2>
     <p>Nous organisons des événements culturels coréens à Marseille.</p>
   </main>
+
   <footer>
     &copy; 2025 BYUS — Tous droits réservés
   </footer>
