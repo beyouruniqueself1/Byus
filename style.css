@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-/* BODY & FOND GALAXIE BLEUE */
+/* BODY & FOND GALAXIE BLEUE FONCÉE */
 body {
   font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0 20px;
-  background: radial-gradient(circle at center, #0057a3 0%, #001933 80%);
+  background: radial-gradient(circle at center, #00314d 0%, #000e1a 80%);
   color: #fdf7c3;
   min-height: 100vh;
   overflow-x: hidden;
@@ -98,12 +98,12 @@ header p {
   color: #fdf7c3cc;
 }
 
-/* NAVIGATION (bleu foncé) */
+/* NAVIGATION (bleu galaxie foncé) */
 nav {
-  background: #002d5f;
+  background: #001b33;
   border-radius: 8px;
   margin-bottom: 25px;
-  box-shadow: 0 0 12px #0057a3aa;
+  box-shadow: 0 0 12px #00314daa;
   position: relative;
   z-index: 1;
 }
@@ -130,7 +130,7 @@ nav ul.menu li a {
 nav ul.menu li a:hover,
 nav ul.menu li a:focus {
   background-color: #fdf7c3;
-  color: #0057a3;
+  color: #00314d;
   outline: none;
 }
 
@@ -138,10 +138,10 @@ nav ul.menu li a:focus {
 main {
   max-width: 900px;
   margin: 0 auto 40px;
-  background: rgba(0, 25, 51, 0.8);
+  background: rgba(0, 14, 26, 0.8);
   padding: 20px 30px;
   border-radius: 12px;
-  box-shadow: 0 0 15px #0057a3cc;
+  box-shadow: 0 0 15px #00314dcc;
   position: relative;
   z-index: 1;
 }
@@ -159,7 +159,7 @@ footer {
   padding: 15px 0;
   font-size: 0.9rem;
   color: #d0cfcfcc;
-  border-top: 1px solid #0057a355;
+  border-top: 1px solid #00314d55;
   background: transparent;
   position: relative;
   z-index: 1;
@@ -190,7 +190,7 @@ form textarea {
 
 form button {
   background-color: #fdf7c3;
-  color: #0057a3;
+  color: #00314d;
   font-weight: 700;
   border: none;
   padding: 12px;
