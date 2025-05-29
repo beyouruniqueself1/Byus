@@ -2,10 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1a0033; /* violet foncé */
-  color: #fdf7c3;            /* jaune pâle */
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  background: 
+    radial-gradient(circle at center, #5c1a8b 0%, #1a0033 80%), /* dégradé violet */
+    url('https://i.ibb.co/7S6zYKq/stars.png') repeat; /* image étoiles en overlay */
+  color: #fdf7c3; /* jaune pâle */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
 }
 
 /* En-tête */
