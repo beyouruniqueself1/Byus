@@ -1,109 +1,173 @@
-/* Base générale */
+/* RESET de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY & FOND GALAXIE */
 body {
   margin: 0;
-  padding: 0;
-  background: 
-    radial-gradient(circle at center, #5c1a8b 0%, #1a0033 80%), /* dégradé violet */
-    url('https://i.ibb.co/7S6zYKq/stars.png') repeat; /* image étoiles en overlay */
-  color: #fdf7c3; /* jaune pâle */
+  padding: 0 20px;
+  background: radial-gradient(circle at center, #5c1a8b 0%, #1a0033 80%);
+  color: #fdf7c3;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
 }
 
-/* En-tête */
+/* ÉTOILES ANIMÉES */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(2px 2px at 10% 20%, #fdf7c3 99%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 40%, #fdf7c3 99%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 50% 80%, #fdf7c3 99%, transparent 100%),
+    radial-gradient(2px 2px at 70% 60%, #fdf7c3 99%, transparent 100%),
+    radial-gradient(1.8px 1.8px at 90% 30%, #fdf7c3 99%, transparent 100%);
+  background-repeat: repeat;
+  animation: twinkle 3s infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% {opacity: 0.6;}
+  100% {opacity: 1;}
+}
+
+/* HEADER */
 header {
-  background-color: #2b0055;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
   color: #fdf7c3;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #fdf7c3;
+  text-shadow: 0 0 8px #fdf7c3;
+  position: relative;
+  z-index: 1;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-/* Navigation */
+/* NAVIGATION */
 nav {
-  background-color: #330066;
-  padding: 10px 0;
-  text-align: center;
+  background: #3e1f6a;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 12px #5c1a8baa;
+  position: relative;
+  z-index: 1;
 }
 
-.menu {
+nav ul.menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
 }
 
-.menu li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.menu a {
+nav ul.menu li a {
   color: #fdf7c3;
   text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.menu a:hover {
+nav ul.menu li a:hover,
+nav ul.menu li a:focus {
   background-color: #fdf7c3;
-  color: #1a0033;
+  color: #5c1a8b;
+  outline: none;
 }
 
-/* Contenu principal */
+/* MAIN CONTENT */
 main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: rgba(26, 0, 51, 0.8);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #5c1a8bcc;
+  position: relative;
+  z-index: 1;
 }
 
-/* Formulaire */
+main h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fdf7c3;
+  padding-bottom: 6px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #d0cfcfcc;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid #5c1a8b55;
+}
+
+/* FORMULAIRES (pour Contact & Adhésion) */
 form {
-  background-color: #2b0055;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00000033;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 form label {
-  display: block;
-  margin-bottom: 5px;
+  font-weight: 600;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 10px;
+  border-radius: 8px;
   border: none;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
 }
 
 form button {
   background-color: #fdf7c3;
-  color: #1a0033;
-  padding: 10px 15px;
+  color: #5c1a8b;
+  font-weight: 700;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #ffe;
+form button:hover,
+form button:focus {
+  background-color: #e6df9c;
+  outline: none;
 }
 
-/* Pied de page */
-footer {
-  background-color: #2b0055;
-  color: #fdf7c3;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  border-top: 2px solid #fdf7c3;
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav ul.menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  main {
+    padding: 15px 20px;
+  }
 }
