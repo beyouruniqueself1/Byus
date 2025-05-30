@@ -420,35 +420,6 @@ form button:hover {
   }
 }
 
-/* ÉTOILE FILANTE SIMPLE DANS LE HEADER */
-header::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -40px;
-  width: 2px;
-  height: 2px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 6px white;
-  opacity: 0;
-  animation: shootingStar 4s linear infinite;
-}
-
-@keyframes shootingStar {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(300px, 150px);
-    opacity: 0;
-  }
-}
-
 /* MULTI-ÉTOILES FILANTES */
 .stars {
   position: absolute;
