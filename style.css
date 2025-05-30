@@ -78,14 +78,20 @@ header::before {
 }
 
 /* MULTI-ÉTOILES FILANTES */
-.star {
+.stars {
   position: absolute;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  opacity: 0;
-  animation: shooting 4s linear infinite;
-  box-shadow: 0 0 6px white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+header * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Couleurs d'étoiles */
