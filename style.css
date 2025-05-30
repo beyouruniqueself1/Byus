@@ -73,9 +73,37 @@ header p {
   animation: shooting 5s linear infinite;
 }
 
-.star1 { top: -30px; left: 20%; animation-delay: 0s; }
-.star2 { top: -40px; left: 50%; animation-delay: 2s; }
-.star3 { top: -60px; left: 80%; animation-delay: 4s; }
+.star1 {
+  top: -30px;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.star2 {
+  top: -40px;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.star3 {
+  top: -60px;
+  left: 80%;
+  animation-delay: 4s;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(150px, 100px);
+    opacity: 0;
+  }
+}
 
 @keyframes shooting {
   0% { transform: translate(0, 0); opacity: 0; }
