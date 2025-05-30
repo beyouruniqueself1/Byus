@@ -50,6 +50,35 @@ header p {
   color: #fdfcf9;
 }
 
+/* ÉTOILES FILANTES */
+header::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 8px white;
+  animation: shootingStar 5s linear infinite;
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(300px, 150px);
+    opacity: 0;
+  }
+}
+
 /* NAVIGATION */
 nav {
   background-color: #e3ecff;
