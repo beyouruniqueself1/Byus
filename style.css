@@ -73,24 +73,6 @@ header p {
   animation: shooting 5s linear infinite;
 }
 
-.star1 {
-  top: -30px;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.star2 {
-  top: -40px;
-  left: 50%;
-  animation-delay: 2s;
-}
-
-.star3 {
-  top: -60px;
-  left: 80%;
-  animation-delay: 4s;
-}
-
 @keyframes shooting {
   0% {
     transform: translate(0, 0);
