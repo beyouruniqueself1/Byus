@@ -171,6 +171,18 @@ form button:hover {
   }
 }
 
+/* BOUTON ANIMÉ */
+.btn-anim {
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   nav ul.menu {
